@@ -19,6 +19,14 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
  */
 public final class Constants {
 
+    /** Active drivetrain. MECANUM until swerve hardware is built and tuned. */
+    public enum DriveConfiguration {
+        MECANUM,
+        SWERVE_SKELETON
+    }
+
+    public static DriveConfiguration DRIVE_CONFIGURATION = DriveConfiguration.MECANUM;
+
     // ----- Source: RR MecanumDrive.Params (converted where applicable) -----
     /** Inches per encoder tick (RR inPerTick). Used for Pinpoint offset conversion only. */
     public static final double IN_PER_TICK = 0.00194723378259707;
@@ -86,6 +94,9 @@ public final class Constants {
             0.995, 0.1, 0.1, 0.009, 50, 1.25, 10, 1);
 
     public static Follower createFollower(HardwareMap hardwareMap) {
+        if (DRIVE_CONFIGURATION == DriveConfiguration.SWERVE_SKELETON) {
+            return org.firstinspires.ftc.teamcode.robot.drive.SwerveDriveSkeleton.createFollower(hardwareMap);
+        }
         return new FollowerBuilder(FOLLOWER_CONSTANTS, hardwareMap)
                 .mecanumDrivetrain(DRIVE_CONSTANTS)
                 .pinpointLocalizer(LOCALIZER_CONSTANTS)

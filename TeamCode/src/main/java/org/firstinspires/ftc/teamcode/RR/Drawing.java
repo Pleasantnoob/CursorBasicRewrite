@@ -7,8 +7,8 @@ import org.firstinspires.ftc.teamcode.util.Vector2d;
 import java.util.List;
 
 /**
- * Field overlay drawing for FTC Dashboard. All coordinates in field inches (origin center, +X right, +Y away from red).
- * Used by MainDrive to show robot pose, goal, zones, aim line, and pose history.
+ * Field overlay drawing for FTC Dashboard. Official FTC center frame — see util.FieldCoordinates.
+ * Used by {@link org.firstinspires.ftc.teamcode.robot.telemetry.LiveTelemetry} for pose, goal, zones, and aim line.
  */
 public final class Drawing {
     private Drawing() {}

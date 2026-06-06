@@ -1,14 +1,11 @@
 package org.firstinspires.ftc.teamcode.util;
 
 /**
- * Robot pose (x, y in field inches, heading in radians). Used for Drawing, PoseBridge, and Pedro path conversion.
+ * Robot pose in the official FTC field frame (center origin, inches, heading radians).
+ * See {@link FieldCoordinates} for axis definitions and Pedro conversion.
  */
 public final class Pose2d {
 
-    /** Convert Road Runner Pose2d to util Pose2d (for RR package and autos still using RR localizer). */
-    public static Pose2d fromRR(com.acmerobotics.roadrunner.Pose2d r) {
-        return new Pose2d(r.position.x, r.position.y, r.heading.toDouble());
-    }
     public final Vector2d position;
     /** Heading in radians. */
     public final double heading;

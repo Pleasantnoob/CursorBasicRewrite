@@ -3,20 +3,20 @@ package org.firstinspires.ftc.teamcode.util;
 import com.acmerobotics.dashboard.telemetry.TelemetryPacket;
 import com.pedropathing.paths.PathChain;
 
-import org.firstinspires.ftc.teamcode.Toros.Drive.PedroDrive;
+import org.firstinspires.ftc.teamcode.robot.drive.DriveSubsystem;
 
 /** Runs a Pedro path until complete. Call once per path segment. */
 public class FollowPathAction implements Action {
-    private final PedroDrive drive;
+    private final DriveSubsystem drive;
     private final PathChain pathChain;
     private final boolean holdEnd;
     private boolean started;
 
-    public FollowPathAction(PedroDrive drive, PathChain pathChain) {
+    public FollowPathAction(DriveSubsystem drive, PathChain pathChain) {
         this(drive, pathChain, false);
     }
 
-    public FollowPathAction(PedroDrive drive, PathChain pathChain, boolean holdEnd) {
+    public FollowPathAction(DriveSubsystem drive, PathChain pathChain, boolean holdEnd) {
         this.drive = drive;
         this.pathChain = pathChain;
         this.holdEnd = holdEnd;
