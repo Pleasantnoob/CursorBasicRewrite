@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+    namespace 'com.bylazar.cursoragent'
+
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion 24
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+repositories {
+    maven { url = 'https://mymaven.bylazar.com/releases' }
+}
+
+dependencies {
+    compileOnly 'org.firstinspires.ftc:RobotCore:11.1.0'
+    compileOnly 'org.firstinspires.ftc:Hardware:11.1.0'
+    compileOnly 'org.firstinspires.ftc:FtcCommon:11.1.0'
+    compileOnly 'com.bylazar:fullpanels:1.0.12'
+}

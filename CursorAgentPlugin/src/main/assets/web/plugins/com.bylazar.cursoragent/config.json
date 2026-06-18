@@ -1,0 +1,35 @@
+{
+  "id": "com.bylazar.cursoragent",
+  "name": "Cursor Agent",
+  "letterName": "CA",
+  "description": "AI agent control bridge for Cursor MCP",
+  "websiteURL": "https://panels.bylazar.com",
+  "mavenURL": "https://mymaven.bylazar.com/releases",
+  "packageString": "com.bylazar:cursoragent:1.0.0",
+  "version": "1.0.0",
+  "pluginsCoreVersion": "1.1.44",
+  "author": "Cursor Integration",
+  "manager": "",
+  "components": [
+    {
+      "type": "widget",
+      "id": "AgentStatus",
+      "filepath": "AgentStatus"
+    }
+  ],
+  "templates": [],
+  "includedPluginsIDs": [],
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "releaseDate": "17.06.2026",
+      "changes": [
+        {
+          "type": "ADDED",
+          "description": "Initial Cursor MCP agent control plugin",
+          "upgrading": ""
+        }
+      ]
+    }
+  ]
+}

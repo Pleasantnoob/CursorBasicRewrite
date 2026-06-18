@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "panels-robot": {
+      "command": "node",
+      "args": ["${workspaceFolder}/mcp-server/dist/index.js"],
+      "env": {
+        "PANELS_ROBOT_HOST": "192.168.43.1",
+        "PANELS_WS_PORT": "8002",
+        "PANELS_HTTP_PORT": "8001"
+      }
+    }
+  }
+}

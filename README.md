@@ -1,3 +1,9 @@
+## Cursor AI robot control (Panels MCP)
+
+**Open this repo in Cursor** to drive and tune the robot via MCP tools. Full guide: [docs/PANELS_MCP.md](docs/PANELS_MCP.md)
+
+Quick flow: deploy APK → join Control Hub WiFi → reload MCP → `robot_connect` → `robot_start_opmode` → `robot_drive`
+
 ## Info about 20357
 
    We have MeepMeep pathing for testing out autonomous paths. In android studio you have to make a seperate application to run it which can be found in the MeepMeep repo https://github.com/acmerobotics/MeepMeep

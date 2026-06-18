@@ -1,0 +1,20 @@
+{
+  "motors": {
+    "fl": "fl",
+    "bl": "bl",
+    "fr": "fr",
+    "br": "br",
+    "intake": "intake",
+    "launch": "launch",
+    "trans": "trans"
+  },
+  "servos": {
+    "hood": "hood",
+    "turret": "turret"
+  },
+  "defaultOpMode": "Agent Teleop",
+  "drive": {
+    "maxPower": 0.75,
+    "commandTtlMs": 200
+  }
+}
